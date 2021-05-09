@@ -18,7 +18,7 @@ func Min(x, y int) int {
 
 func getHotTopic(url string) ([]string, []string, error) {
 	client := &http.Client{
-		Timeout: 2 * time.Second,
+		Timeout: 5 * time.Second,
 	}
 
 	req, _ := http.NewRequest("GET", url, nil)
