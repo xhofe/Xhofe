@@ -1,0 +1,36 @@
+name: update.
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Setup timezone
+        uses: zcong1993/setup-timezone@master
+        with:
+          timezone: Asia/Shanghai
+
+      - uses: actions/checkout@master
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+
+      - uses: actions/setup-go@v1
+        with:
+          go-version: '1.15.4' # The Go version to download (if necessary) and use.
+      - run: go mod download
+      - run: go run generate_readme.go
+      - name: Commit files
+        run: |
+          git add README.md
+          git config --local user.email "i@nn.ci"
+          git config --local user.name "Xhofe"
+          git commit --allow-empty -m "Update today's bilibili rank on $(date)" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
