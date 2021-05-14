@@ -50,6 +50,7 @@ func getHotTopic(url string) ([]string, []string, error) {
 		a := selection.Find(".info > a")
 		topic := a.Text()
 		href, _ := a.Attr("href")
+		fmt.Println(i+1, topic, href)
 		topics = append(topics, topic)
 		urls = append(urls, href)
 	})
@@ -62,7 +63,7 @@ func generateREADME(topics []string, urls []string) {
 		// n. XXX
 		temp := fmt.Sprintf("%d. %s", index+1, topic)
 		topic = strings.Replace(topic, " ", "%20", -1)
-		temp += "[:link:](" + urls[index] + ")\n"
+		temp += " [:link:](" + urls[index] + ")\n"
 
 		if index == 10 {
 			temp = fmt.Sprintf("<details>\n<summary>%d ~ %d</summary>\n\n%s", index+1, Min(index+10, len(topics)), temp)
