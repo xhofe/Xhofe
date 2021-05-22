@@ -31,7 +31,7 @@ jobs:
           git add README.md
           git config --local user.email "i@nn.ci"
           git config --local user.name "Xhofe"
-          git commit --allow-empty -m "Update today's bilibili rank on $(date)" -a
+          git commit --allow-empty -m "Update today's hot rank on $(date)" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
