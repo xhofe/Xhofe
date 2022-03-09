@@ -24,6 +24,7 @@ jobs:
       - uses: actions/setup-go@v1
         with:
           go-version: '1.15.4' # The Go version to download (if necessary) and use.
+          
       - run: go mod download
       - run: go run generate_readme.go
       - name: Commit files
