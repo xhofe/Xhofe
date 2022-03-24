@@ -1,7 +1,11 @@
 ### Hello there, I'm Xhofe 👋
 - I love open source. ❤️
 - [@Blog](https://nn.ci) [@Github](https://github.com/Xhofe)
+
+![skills](https://skillicons.dev/icons?i=go,rust,react,docker,cpp,html,css,ts,cloudflare,git,java,py,linux,md,mysql,stackoverflow,svelte,vscode,vue,workers,tailwind)
+
 ---
+
 ![Count](https://profile-counter.glitch.me/Xhofe/count.svg)
 
 [![](https://raw.githubusercontent.com/Xhofe/Xhofe/main/profile-summary-card-output/github/0-profile-details.svg)](https://github.com/Xhofe)
