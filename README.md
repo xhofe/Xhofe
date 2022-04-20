@@ -6,7 +6,7 @@
 
 ---
 
-![Count](https://api.nn.ci/Xhofe/count.svg)
+![Count](https://api.nn.ci/Xhofe/count.svg?i)
 
 [![](https://raw.githubusercontent.com/Xhofe/Xhofe/main/profile-summary-card-output/github/0-profile-details.svg)](https://github.com/Xhofe)
 [![](https://raw.githubusercontent.com/Xhofe/Xhofe/main/profile-summary-card-output/github/1-repos-per-language.svg)](https://github.com/Xhofe) [![](https://raw.githubusercontent.com/Xhofe/Xhofe/main/profile-summary-card-output/github/2-most-commit-language.svg)](https://github.com/Xhofe)
