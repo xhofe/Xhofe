@@ -2,7 +2,7 @@
 - I love open source. ❤️
 - [@Blog](https://nn.ci) [@Github](https://github.com/Xhofe)
 
-![skills](https://skillicons.dev/icons?i=go,rust,react,docker,cpp,html,css,ts,cloudflare,git,java,py,linux,md,mysql,stackoverflow,svelte,vscode,vue,workers,tailwind)
+![skills](https://skillicons.dev/icons?i=go,rust,react,docker,cpp,html,css,ts,cloudflare,git,java,py,linux,md,mysql,stackoverflow,svelte,vscode,vue,workers,tailwind,ps)
 
 ---
 
