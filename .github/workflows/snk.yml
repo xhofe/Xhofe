@@ -1,0 +1,33 @@
+name: generate animation
+
+on:
+  schedule:
+    - cron: "0 12 * * *" # every 6 hours
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
+      - name: generate github-contribution-grid-snake.svg
+        uses: Platane/snk@master
+        with:
+          github_user_name: Xhofe 
+          svg_out_path: dist/github-contribution-grid-snake.svg
+      - name: Commit files
+        run: |
+          git config --local user.email "i@nn.ci"
+          git config --local user.name "Noah Hsu"
+          git commit --allow-empty -m "update github-contribution-grid-snake.svg" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
