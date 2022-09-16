@@ -25,8 +25,8 @@ jobs:
       - name: Commit files
         run: |
           git add out/
-          git config --local user.email "i@nn.ci"
-          git config --local user.name "Noah Hsu"
+          git config --local user.email "bot@nn.ci"
+          git config --local user.name "Bot"
           git commit --allow-empty -m "update github-contribution-grid-snake.svg" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
